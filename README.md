@@ -1,13 +1,16 @@
 # SvelteKit Bun
 
-Starter template with
+Starter template with:
 
 - SvelteKit
-- Bun
 - TailwindCSS
-- eslint
+- Bun
 - Typescript
+- eslint
+- Prettier
 - Svelte MCP
+
+## Development
 
 ```sh
 bun --bun run dev
