@@ -6,7 +6,7 @@ Starter template with:
 - TailwindCSS
 - Bun
 - Typescript
-- eslint
+- ESLint
 - Prettier
 - Svelte MCP
 
