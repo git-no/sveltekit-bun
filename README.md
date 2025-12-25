@@ -9,6 +9,7 @@ Starter template with:
 - ESLint
 - Prettier
 - Svelte MCP
+- Zod
 
 ## Development
 
