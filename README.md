@@ -1,6 +1,9 @@
-# SvelteKit Bun
+# SvelteKit with Bun
 
-Starter template with:
+SvelteKit using Bun.
+Works with Vercel or Docker.
+
+Starter template with modules/solutions:
 
 - SvelteKit
 - TailwindCSS
@@ -10,6 +13,10 @@ Starter template with:
 - Prettier
 - Svelte MCP
 - Zod
+
+Includes:
+
+- SiteMap
 
 ## Development
 
