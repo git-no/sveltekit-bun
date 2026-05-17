@@ -2,6 +2,7 @@ const site = 'https://yourdomain.com'; // change this to reflect your domain
 const pages: string[] = ['/about']; // populate this with all the slugs you wish to include. There should be no initial slash /, as that’s covered in the template:
 
 /** @type {import('./$types').RequestHandler} */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET({ url }) {
 	const body = sitemap(pages);
 	const response = new Response(body);
