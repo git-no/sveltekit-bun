@@ -1,6 +1,6 @@
 # SvelteKit with Bun
 
-[![Build and lint](https://github.com/git-no/sveltekit-bun/actions/workflows/testing.yaml/badge.svg?branch=main)](https://github.com/git-no/sveltekit-bun/actions/workflows/testing.yaml)
+[![Build and lint](https://github.com/git-no/sveltekit-bun/actions/workflows/testing.yaml/badge.svg?branch=main&refresh=09ad1d7)](https://github.com/git-no/sveltekit-bun/actions/workflows/testing.yaml)
 
 SvelteKit using Bun.
 Works with Vercel or Docker.
