@@ -1,0 +1,36 @@
+name: Dependabot auto-merge
+
+on:
+  workflow_run:
+    workflows:
+      - Testing
+    types:
+      - completed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge for Dependabot pull requests
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          pr_number="$(gh api "repos/${GH_REPO}/commits/${HEAD_SHA}/pulls" \
+            --jq '.[] | select(.user.login == "dependabot[bot]") | .number' \
+            | head -n 1)"
+
+          if [ -z "$pr_number" ]; then
+            echo "No Dependabot pull request found for ${HEAD_SHA}."
+            exit 0
+          fi
+
+          gh pr merge "$pr_number" --auto --squash --repo "$GH_REPO"
