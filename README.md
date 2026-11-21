@@ -29,5 +29,5 @@ bun --bun run dev
 To create a production version of your app:
 
 ```sh
-bun --bun run build
+bun run build
 ```
